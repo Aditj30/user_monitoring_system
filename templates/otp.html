@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <h2>OTP Verification</h2>
+    <p>Enter the OTP shown below (in production this would be sent to your email/phone)</p>
+    <p id="otp-display" style="font-size:24px; font-weight:bold; color:green;"></p>
+    <br>
+    <input type="text" id="otp_code" placeholder="Enter 6-digit OTP" maxlength="6"/><br><br>
+    <button onclick="verifyOTP()">Verify OTP</button>
+    <p id="msg"></p>
+
+    <script>
+        // Get user_id from URL
+        const params = new URLSearchParams(window.location.search);
+        const user_id = params.get("user_id");
+
+        // Auto generate OTP when page loads
+        async function generateOTP() {
+            const res = await fetch("/api/generate-otp", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ user_id: parseInt(user_id) })
+            });
+            const data = await res.json();
+            if (res.ok) {
+                document.getElementById("otp-display").innerText = "Your OTP: " + data.otp;
+            }
+        }
+
+        async function verifyOTP() {
+            const otp_code = document.getElementById("otp_code").value;
+            const res = await fetch("/api/verify-otp", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ user_id: parseInt(user_id), otp_code })
+            });
+            const data = await res.json();
+            if (res.ok) {
+                window.location.href = data.redirect;
+            } else {
+                document.getElementById("msg").innerText = data.error;
+            }
+        }
+
+        generateOTP();
+    </script>
+</body>
+</html> 
