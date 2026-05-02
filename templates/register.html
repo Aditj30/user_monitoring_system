@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <input type="text" id="name" placeholder="Full Name" /><br><br>
+    <input type="email" id="email" placeholder="Email" /><br><br>
+    <input type="password" id="password" placeholder="Password (8+ chars, 1 upper, 1 digit)" /><br><br>
+    <button onclick="doRegister()">Register</button>
+    <p id="msg"></p>
+    <a href="/login">Already have an account? Login</a>
+
+    <script>
+        async function doRegister() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const res = await fetch("/api/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, password })
+            });
+            const data = await res.json();
+            if (res.ok) {
+                alert("Registration successful! Please login.");
+                window.location.href = "/login";
+            } else {
+                document.getElementById("msg").innerText = data.error;
+            }
+        }
+    </script>
+</body>
+</html>
