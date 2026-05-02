@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-surface-bright: #f5f7f9;
+  --color-on-error: #ffefee;
+  --color-on-secondary: #f3f1ff;
+  --color-on-primary-fixed: #000000;
+  --color-secondary-container: #cbceff;
+  --color-tertiary-dim: #7f2d7e;
+  --color-surface-container-highest: #d9dde0;
+  --color-error: #b31b25;
+  --color-on-primary: #f1f2ff;
+  --color-outline-variant: #abadaf;
+  --color-primary-fixed-dim: #638eff;
+  --color-tertiary-fixed-dim: #e88ae1;
+  --color-secondary-fixed-dim: #babfff;
+  --color-on-primary-container: #001e58;
+  --color-tertiary-fixed: #f797f0;
+  --color-on-tertiary-container: #610e63;
+  --color-surface-container: #e5e9eb;
+  --color-on-tertiary: #ffeef8;
+  --color-secondary-fixed: #cbceff;
+  --color-surface-container-lowest: #ffffff;
+  --color-background: #f5f7f9;
+  --color-tertiary: #8d3a8b;
+  --color-on-primary-fixed-variant: #00276c;
+  --color-surface-variant: #d9dde0;
+  --color-surface: #f5f7f9;
+  --color-on-surface-variant: #595c5e;
+  --color-on-surface: #2c2f31;
+  --color-error-container: #fb5151;
+  --color-primary-container: #799dff;
+  --color-on-error-container: #570008;
+  --color-secondary: #4551b7;
+  --color-inverse-primary: #5e8bff;
+  --color-surface-container-low: #eef1f3;
+  --color-inverse-on-surface: #9a9d9f;
+  --color-outline: #747779;
+  --color-error-dim: #9f0519;
+  --color-surface-dim: #d0d5d8;
+  --color-primary: #0052d0;
+  --color-primary-dim: #0047b7;
+  --color-surface-tint: #0052d0;
+  --color-on-secondary-fixed-variant: #3a45ac;
+  --color-inverse-surface: #0b0f10;
+  --color-on-secondary-fixed: #19248e;
+  --color-tertiary-container: #f797f0;
+  --color-on-tertiary-fixed: #400042;
+  --color-on-tertiary-fixed-variant: #6c1a6c;
+  --color-on-secondary-container: #303ba2;
+  --color-surface-container-high: #dfe3e6;
+  --color-secondary-dim: #3944ab;
+  --color-primary-fixed: #799dff;
+  --color-on-background: #2c2f31;
+
+  --font-headline: var(--font-manrope);
+  --font-body: var(--font-inter);
+  --font-label: var(--font-inter);
+}
+
+:root {
+  --background: #f5f7f9;
+  --foreground: #2c2f31;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-nav {
+  background: rgba(245, 247, 249, 0.8);
+  backdrop-filter: blur(20px);
+}

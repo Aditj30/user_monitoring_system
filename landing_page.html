@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IdentityPro - Secure User Identification System</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f5f7f9",
+                        "on-error": "#ffefee",
+                        "on-secondary": "#f3f1ff",
+                        "on-primary-fixed": "#000000",
+                        "secondary-container": "#cbceff",
+                        "tertiary-dim": "#7f2d7e",
+                        "surface-container-highest": "#d9dde0",
+                        "error": "#b31b25",
+                        "on-primary": "#f1f2ff",
+                        "outline-variant": "#abadaf",
+                        "primary-fixed-dim": "#638eff",
+                        "tertiary-fixed-dim": "#e88ae1",
+                        "secondary-fixed-dim": "#babfff",
+                        "on-primary-container": "#001e58",
+                        "tertiary-fixed": "#f797f0",
+                        "on-tertiary-container": "#610e63",
+                        "surface-container": "#e5e9eb",
+                        "on-tertiary": "#ffeef8",
+                        "secondary-fixed": "#cbceff",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f5f7f9",
+                        "tertiary": "#8d3a8b",
+                        "on-primary-fixed-variant": "#00276c",
+                        "surface-variant": "#d9dde0",
+                        "surface": "#f5f7f9",
+                        "on-surface-variant": "#595c5e",
+                        "on-surface": "#2c2f31",
+                        "error-container": "#fb5151",
+                        "primary-container": "#799dff",
+                        "on-error-container": "#570008",
+                        "secondary": "#4551b7",
+                        "inverse-primary": "#5e8bff",
+                        "surface-container-low": "#eef1f3",
+                        "inverse-on-surface": "#9a9d9f",
+                        "outline": "#747779",
+                        "error-dim": "#9f0519",
+                        "surface-dim": "#d0d5d8",
+                        "primary": "#0052d0",
+                        "primary-dim": "#0047b7",
+                        "surface-tint": "#0052d0",
+                        "on-secondary-fixed-variant": "#3a45ac",
+                        "inverse-surface": "#0b0f10",
+                        "on-secondary-fixed": "#19248e",
+                        "tertiary-container": "#f797f0",
+                        "on-tertiary-fixed": "#400042",
+                        "on-tertiary-fixed-variant": "#6c1a6c",
+                        "on-secondary-container": "#303ba2",
+                        "surface-container-high": "#dfe3e6",
+                        "secondary-dim": "#3944ab",
+                        "primary-fixed": "#799dff",
+                        "on-background": "#2c2f31"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(245, 247, 249, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7f9;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary/20">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-slate-50/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-slate-900">IdentityPro</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-blue-600 font-semibold border-b-2 border-blue-600 transition-all duration-200" href="#">Home</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors" href="#">About</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors" href="#">Login</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-6 py-2 rounded-full font-semibold hover:scale-[1.02] transition-transform shadow-sm">
+                    Register
+                </button>
+</div>
+</div>
+<div class="bg-slate-200/50 h-[1px] w-full"></div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-gradient-to-b from-primary/5 via-surface to-background">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]"></div>
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide uppercase">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                        Enterprise Grade Security
+                    </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
+                        Secure User <span class="text-primary">Identification</span> System
+                    </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-xl">
+                        Experience the next generation of digital sovereignty. Our platform delivers advanced multi-layered authentication protocols with editorial-grade interface design, ensuring your identity remains uncompromised.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-primary/20">
+                            Register Now
+                        </button>
+<button class="px-8 py-4 rounded-full font-bold text-lg border border-outline/20 text-primary hover:bg-surface-container-low transition-all">
+                            Login
+                        </button>
+</div>
+<div class="flex items-center gap-6 pt-8 border-t border-outline-variant/10">
+<div class="flex -space-x-3">
+<img alt="User 1" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="professional portrait of a young executive woman with soft natural lighting and blurred office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpLiwSyYz8iQt3aPuQQDY2FJubxk13yr4IgNaGs10VmUeIlvka3nwKZPuis2P76Wlb6yHscxEZClUCUTvXTnpvZEimJ0BWS9ZcCFgCbm6RwYYsO2Rq1nDjyMssh7iTFaVjfqAXzClAkm3gYy8wRO-r6PYJ_bdJeQVuMwF20EV6R_-VXv7zOISyt_Icm9PfnB9mlIYWZZrZ4Pl9cHTEDCAHyeiTd59hZW_BVNSK011s2lLHee_SriIRlLsiKf90PAUZT1gwVuu4xvqy"/>
+<img alt="User 2" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="close-up portrait of a man in professional attire with warm afternoon sunlight and bokeh forest background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2WSeSUKyh4E34kmSKbMFAx6jtqe0KqmsfLc112LZ3Q3Kr-xZ7RqbO87t6RH_7sMduCfaY17UOc9xXRwrAcp09hSwhQ7AR-gVsyxsRDou_h_guuT_Xysw9xlqr34sp8UEqxSu6i3-DGWwL8l0--4p_2lhY42p9QyTJnYlWV195d324b1zju3S-m14H1CwtwWDwi_ICKOStjU1HYSV4Z1X81LbOZnbWezxPzisbZyJxgrVlbxCUN8UkGuuwVrkCYhkvSnQGFNh74Eh_"/>
+<img alt="User 3" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="headshot of a smiling man with sharp focus and clean architectural background in soft blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcsWk456sQI2UqdAepcOOH_GC1wZeZwm9EcbPLA-ztqxBa7FKUJxFdI7NbFwrD0B6B-r6ng9zQUjlDwOcQ3xQQtYeHZGWV5bY2lYFPsPtiv9TiB1JHHcKOokh1XsuZ84i5cKhXh1iXFPkODElbnB0g7Fj2QapdP8vOiKfeGx5qXGmVZrip8A6SCNVsq4hQwdwoy6dfaN1qwCtGGp2-LD97qcluCzuM5gj4di6Pon6CcnEmMWA_Jz0z34N-Gtbk6Tc8TbF03xybjzI5"/>
+</div>
+<p class="text-sm text-on-surface-variant font-medium">
+                            Trusted by <span class="text-on-surface font-bold">2,500+</span> global enterprises
+                        </p>
+</div>
+</div>
+<!-- Bento Grid Visualization -->
+<div class="grid grid-cols-2 gap-4 lg:gap-6">
+<div class="bg-surface-container-lowest/70 backdrop-blur-md p-6 rounded-xl border border-white/40 shadow-sm col-span-2">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+</div>
+<span class="text-xs font-bold text-primary px-2 py-1 bg-primary-container/20 rounded">ENCRYPTED</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Biometric Vault</h3>
+<p class="text-sm text-on-surface-variant">Military-grade hashing for your most sensitive identification vectors.</p>
+</div>
+<div class="bg-surface-container-lowest/70 backdrop-blur-md p-6 rounded-xl border border-white/40 shadow-sm">
+<div class="p-3 bg-secondary/10 rounded-lg w-fit mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="fingerprint">fingerprint</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Zero-Trust</h3>
+<p class="text-xs text-on-surface-variant">Continuous verification architecture.</p>
+</div>
+<div class="bg-surface-container-lowest/70 backdrop-blur-md p-6 rounded-xl border border-white/40 shadow-sm">
+<div class="p-3 bg-tertiary/10 rounded-lg w-fit mb-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="lock">lock</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Passkeys</h3>
+<p class="text-xs text-on-surface-variant">Modern passwordless authentication flow.</p>
+</div>
+<div class="bg-gradient-to-br from-primary to-primary-dim p-8 rounded-xl shadow-xl shadow-primary/30 col-span-2 flex items-center justify-between overflow-hidden relative">
+<div class="relative z-10">
+<p class="text-white/80 text-sm font-medium mb-1">Security Score</p>
+<h4 class="text-white text-4xl font-black tracking-tighter leading-none">99.9%</h4>
+<p class="text-white/60 text-[10px] mt-2 uppercase tracking-widest font-bold">Verified Accuracy</p>
+</div>
+<div class="relative z-10 h-16 w-32 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="query_stats">query_stats</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Highlight (Editorial Section) -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="flex-1 relative">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
+<img alt="Security Platform" class="w-full h-full object-cover" data-alt="minimalist modern office desk with high-end laptop showing abstract security interface and blue light reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxcH1fiClkY0LoibgTffM2Yxw4dcMTtoRftOGYk2qpt6JHxAuVZqQf58OeSRCitwUofWOQ_D7b2Tl0YjhJhs3lC-QMwiplAzXq2y7jHIqtsM4d5Z34IVfv6kdU8GgcQDwyfXvc-XlCz4fl0RIITfhXGAFQyNtyNphPq7sgn0KPfZUBA2uMbgDnFMf98Oehp8k4LnK9z8gpE4u56kM6KN6fqL2rHGfaXe9IIDhR2ox1KXqSxN-vih8XH6XUUvZi4z6GaFNCEBzxYnv8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="absolute -bottom-10 -right-10 bg-surface-container-lowest p-8 rounded-2xl shadow-xl border border-outline-variant/10 hidden lg:block">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<p class="font-bold">Instant Sync</p>
+<p class="text-xs text-on-surface-variant">Global edge propagation</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 space-y-8">
+<h2 class="text-4xl font-bold leading-tight">Designed for <span class="text-primary italic">Absolute Privacy</span></h2>
+<div class="space-y-6">
+<div class="flex gap-6 group">
+<div class="shrink-0 w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" data-icon="cloud_done">cloud_done</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Immutable Ledger Technology</h4>
+<p class="text-on-surface-variant text-sm">Every authentication event is cryptographically signed and stored on a private immutable ledger for forensic auditing.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="shrink-0 w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" data-icon="hub">hub</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Decentralized Trust Nodes</h4>
+<p class="text-on-surface-variant text-sm">No single point of failure. Our identification mesh distributes verification across global secure enclaves.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-6">
+<div class="max-w-5xl mx-auto rounded-3xl bg-inverse-surface p-12 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to secure your digital identity?</h2>
+<p class="text-inverse-on-surface text-lg mb-10 max-w-2xl mx-auto">Join thousands of companies protecting their users with the world's most advanced identification system.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform">Get Started Today</button>
+<button class="bg-white/10 text-white border border-white/20 backdrop-blur px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all">Contact Sales</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="py-12 bg-surface-container-low border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-2xl font-black text-primary">IdentityPro</div>
+<div class="flex gap-8">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Security</a>
+</div>
+<p class="text-sm text-on-surface-variant">© 2024 IdentityPro. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
